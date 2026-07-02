@@ -1,0 +1,47 @@
+Task 1 coverage - 100% class , 100% method, 100% line, 100% branch
+Task 23 coverage - 100% class , 100% method, 100% line, 93% branch
+Task 4 coverage - 100% class , 100% method, 85% line, 62% branch
+Task 5 coverage - 100% class , 100% method, 96% line, 88% branch
+Task 6 coverage - 100% class , 100% method, 100% line, 87% branch
+
+Some of the untested branches:
+
+   public List<Animal> sortByIntakeDate(List<Animal> animals) {
+        if (animals == null) {
+            return List.of();
+        }
+        List<Animal> sorted = new ArrayList<>(animals);
+        sorted.sort(Comparator.comparing(Animal::getIntakeDate));
+        return sorted;
+    }
+
+   animals == null - is not being checked, however it would return an empty list in case of
+   animal being null. it is still valuable to test it to lock in the intended null-handling.
+
+   public ParseResult parseFile(Path filePath) throws IOException {
+               List<Animal> animals = new ArrayList<>();
+               int skipped = 0;
+
+               try (BufferedReader reader = Files.newBufferedReader(filePath, StandardCharsets.UTF_8)) {
+                   String header = reader.readLine(); // skip header
+                   if (header == null) {
+                       return new ParseResult(animals, skipped);
+                   }
+
+                   String line;
+                   while ((line = reader.readLine()) != null) {
+                       Optional<Animal> parsed = parseRow(line);
+                       if (parsed.isPresent()) {
+                           animals.add(parsed.get());
+                       } else {
+                           skipped++;
+                       }
+                   }
+               }
+
+               return new ParseResult(animals, skipped);
+           }
+
+   header == null is not tested. header would be null only if the file was empty, which is considered
+   an edge case of this function. testing it would be valuable incase of function modification and
+   possible NullPointerException.

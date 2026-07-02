@@ -80,7 +80,7 @@ class AnimalReportWriterTest {
         
         assertTrue(catLineIndex < dogLineIndex);
 
-        assertTrue(content.contains("Vaccinated: 1"));
+        assertTrue(content.contains("1 vaccinated"));
 
         Files.deleteIfExists(output);
     }

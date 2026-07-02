@@ -29,7 +29,7 @@ public class AnimalSorter {
      */
     public List<Animal> sortByName(List<Animal> animals) {
         if (animals == null) {
-            return List.of();
+            return List.of(); // not covered
         }
         List<Animal> sorted = new ArrayList<>(animals);
         sorted.sort(Comparator.comparing(Animal::getName, String.CASE_INSENSITIVE_ORDER));
