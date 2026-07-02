@@ -42,7 +42,7 @@ src/test/java/lv/bootcamp/shelter/
 
 | # | Package   | Focus | Testing concepts |
 |---|-----------|-------|-----------------|
-| 1 | `task1`   | Pure logic | `assertEquals`, AAA pattern, naming |
+| 1 | `task1` - DONE  | Pure logic | `assertEquals`, AAA pattern, naming | 
 | 2 | `task23`  | Multiple rules | `@ParameterizedTest`, `@CsvSource` |
 | 3 | `task23`  | Error cases | `assertThrows`, exception messages |
 | 4 | `task4`   | Collection order | AssertJ list assertions |
