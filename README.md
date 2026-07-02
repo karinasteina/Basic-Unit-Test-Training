@@ -40,16 +40,16 @@ src/test/java/lv/bootcamp/shelter/
 
 ## Tasks overview
 
-| # | Package   | Focus | Testing concepts |
-|---|-----------|-------|-----------------|
+| # | Package         | Focus | Testing concepts |
+|---|-----------------|-------|-----------------|
 | 1 | `task1` - DONE  | Pure logic | `assertEquals`, AAA pattern, naming | 
-| 2 | `task23`  | Multiple rules | `@ParameterizedTest`, `@CsvSource` |
-| 3 | `task23`  | Error cases | `assertThrows`, exception messages |
-| 4 | `task4`   | Collection order | AssertJ list assertions |
-| 5 | `task5`   | CSV scenarios | `@Nested` classes, `@DisplayName` |
-| 6 | `stretch` | File output formatting | AssertJ string/list assertions |
-| 7 | `task6`   | Mocking a dependency | `@Mock`, `@InjectMocks`, `when/thenReturn`, `verify` |
-| 8 | All       | Coverage | IntelliJ coverage runner |
+| 2 | `task23` - DONE | Multiple rules | `@ParameterizedTest`, `@CsvSource` |
+| 3 | `task23` - DONE | Error cases | `assertThrows`, exception messages |
+| 4 | `task4`         | Collection order | AssertJ list assertions |
+| 5 | `task5`         | CSV scenarios | `@Nested` classes, `@DisplayName` |
+| 6 | `stretch`       | File output formatting | AssertJ string/list assertions |
+| 7 | `task6`         | Mocking a dependency | `@Mock`, `@InjectMocks`, `when/thenReturn`, `verify` |
+| 8 | All             | Coverage | IntelliJ coverage runner |
 
 `task5` introduces Mockito basics: mock a repository dependency so you can test the `IntakeService` in isolation. JPA and controller tests come later in M14.
 

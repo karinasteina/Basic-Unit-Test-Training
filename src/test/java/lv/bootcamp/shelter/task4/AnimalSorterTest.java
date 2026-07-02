@@ -6,6 +6,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Task 4: Collection and sorting tests
@@ -43,29 +48,33 @@ class AnimalSorterTest {
     @Test
     @DisplayName("sortByAge: returns animals ordered youngest to oldest")
     void shouldSortByAgeAscending() {
-        // TODO: Call sorter.sortByAge with [buddy, luna, max, bella]
-        // TODO: Use assertThat(result).extracting(Animal::getName)
-        //       .containsExactly("Bella", "Luna", "Buddy", "Max")
+        List<Animal> result = sorter.sortByAge(List.of(buddy, luna, max, bella));
+        assertThat(result).extracting(Animal::getName)
+                .containsExactly("Bella", "Luna", "Buddy", "Max");
     }
 
     @Test
     @DisplayName("sortByAge: returns empty list for null input")
     void shouldReturnEmptyForNullInput() {
-        // TODO: Call sorter.sortByAge(null)
-        // TODO: Assert result is empty
+        List<Animal> result = sorter.sortByAge(null);
+        assertThat(result).isEmpty();
     }
 
     @Test
     @DisplayName("sortByAge: returns empty list for empty input")
     void shouldReturnEmptyForEmptyInput() {
-        // TODO: Call sorter.sortByAge(List.of())
-        // TODO: Assert result is empty
+        List<Animal> result = sorter.sortByAge(List.of());
+        assertThat(result).isEmpty();
     }
 
     @Test
     @DisplayName("sortByAge: does not modify the original list")
     void shouldNotModifyOriginalList() {
-        // TODO: Create a list, sort it, then verify the original list order is unchanged
+        List<Animal> originalList = new ArrayList<>(List.of(buddy, luna, max, bella));
+        List<Animal> sortedList  = sorter.sortByAge(originalList);
+
+        assertThat(originalList).extracting(Animal::getName)
+                .containsExactly("Buddy", "Luna", "Max", "Bella");
     }
 
     // --- sortByName ---
@@ -73,8 +82,9 @@ class AnimalSorterTest {
     @Test
     @DisplayName("sortByName: returns animals in alphabetical order")
     void shouldSortByNameAlphabetically() {
-        // TODO: Call sorter.sortByName with [buddy, luna, max, bella]
-        // TODO: Verify order is Bella, Buddy, Luna, Max
+        List<Animal> result = sorter.sortByName(List.of(buddy, luna, max, bella));
+        assertThat(result).extracting(Animal::getName)
+                .containsExactly("Bella", "Buddy", "Luna", "Max");
     }
 
     @Test
