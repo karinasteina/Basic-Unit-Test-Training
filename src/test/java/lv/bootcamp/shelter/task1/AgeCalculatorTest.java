@@ -1,5 +1,6 @@
 package lv.bootcamp.shelter.task1;
 
+import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -36,22 +37,24 @@ class AgeCalculatorTest {
     @Test
     @DisplayName("toMonths: 0 years returns 0 months")
     void shouldReturnZeroMonthsForZeroYears() {
-        // TODO: Arrange — nothing extra needed (calculator is set up in @BeforeEach)
-        // TODO: Act — call calculator.toMonths(0)
-        // TODO: Assert — assertEquals(0, result)
+      //  int result = calculator.toMonths(0);
+       // assertEquals(0, result);
     }
 
     @Test
     @DisplayName("toMonths: positive years returns correct months")
     void shouldConvertPositiveYearsToMonths() {
-        // TODO: Test that 3 years = 36 months
+      //  int result = calculator.toMonths(3);
+      //  assertEquals(36, result);
     }
 
     @Test
     @DisplayName("toMonths: negative years throws IllegalArgumentException")
     void shouldThrowForNegativeYears() {
         // TODO: Use assertThrows to verify that toMonths(-1) throws IllegalArgumentException
+      //  IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> calculator.toMonths(-1));
         // TODO: Optionally check the exception message contains "negative"
+      //  assertThat
     }
 
     // --- dogToHumanYears() ---
