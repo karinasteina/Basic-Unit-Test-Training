@@ -45,7 +45,7 @@ src/test/java/lv/bootcamp/shelter/
 | 1 | `task1` - DONE  | Pure logic | `assertEquals`, AAA pattern, naming | 
 | 2 | `task23` - DONE | Multiple rules | `@ParameterizedTest`, `@CsvSource` |
 | 3 | `task23` - DONE | Error cases | `assertThrows`, exception messages |
-| 4 | `task4`         | Collection order | AssertJ list assertions |
+| 4 | `task4` - DONE  | Collection order | AssertJ list assertions |
 | 5 | `task5`         | CSV scenarios | `@Nested` classes, `@DisplayName` |
 | 6 | `stretch`       | File output formatting | AssertJ string/list assertions |
 | 7 | `task6`         | Mocking a dependency | `@Mock`, `@InjectMocks`, `when/thenReturn`, `verify` |
