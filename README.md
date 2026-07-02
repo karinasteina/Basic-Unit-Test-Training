@@ -49,7 +49,7 @@ src/test/java/lv/bootcamp/shelter/
 | 5 | `task5` - DONE   | CSV scenarios | `@Nested` classes, `@DisplayName` |
 | 6 | `stretch` - DONE | File output formatting | AssertJ string/list assertions |
 | 7 | `task6` - DONE   | Mocking a dependency | `@Mock`, `@InjectMocks`, `when/thenReturn`, `verify` |
-| 8 | All              | Coverage | IntelliJ coverage runner |
+| 8 | All     - DONE   | Coverage | IntelliJ coverage runner |
 
 `task5` introduces Mockito basics: mock a repository dependency so you can test the `IntakeService` in isolation. JPA and controller tests come later in M14.
 
